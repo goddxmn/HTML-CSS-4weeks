@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>120-inline과 block요소의 성질을 동시에 가진 inline-block.html</title>
+    <style>
+        h1{
+            
+            font-size: 20px;
+            text-align: center;}
+        p{
+            /* 박스에 크기를 부여하면서 인라인 요소처럼 나란히 표시 됨 */
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+        }
+        p.seodo{
+            background-image: url(./images/seodo.jpg);
+            background-size: cover;
+        }
+        p.dongdo{
+            background-image: url(./images/dongdo.jpg);
+            background-size: cover;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <h1>독도는 2개의 섬으로 구성</h1>
+        <p class="seodo">서도</p>
+        <p class="dongdo">동도</p>
+        <!-- 줄 바꿈은 한칸 띄어쓰기와 같다. -->
+    </div>
+</body>
+</html>

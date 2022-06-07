@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>70-div의 역할과 인라인, 블럭요소의 특징.html</title>
+    <style>
+        h1{background-color: pink;}
+        h1{border: 1px solid blue;}
+        h1{width: 850px;}
+        h1{display: block;}
+        h1{height: 150px;}
+        div{display: block;
+            width: 700px;
+            background-color:yellow;
+            }
+
+        span{display: inline;
+            background-color: orange;
+            width: 300px; 
+            height: 50px;
+            /* 인라인 요소는 크기 설정을 해도 적용되지 않음 */
+            border: 1px solid blue;
+            }
+    </style>
+</head>
+<body>
+    <h1>2022년은 광복77주년</h1>
+    <!-- 아래의 div는 p*3을 감싸는 컨테이너 역할을 한다. -->
+    <div>
+        <p>독도에 대한</p>
+        <p>관심이</p>
+        <p>사라지면 어떻게 될까요?</p>
+    </div>
+
+    <p>주권도</p>
+    <p>사라집니다.</p>
+
+    <hr/>
+    <!-- 소스코드에서 여러칸 띄어쓰기나 줄바꿈을 해도 결과적으로 한칸공백으로만 적용 됨 -->
+    <span>대한민국                       독도에</span>
+    <span>많은                     관심을</span>
+    <span>기울입시다~!</span>
+    <!-- 블럭요소=div , 인라인요소=span -->
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>100-CSS 선택을 편하게 하는 이름표 - id, class.html</title>
+    <style>
+       div#wrap{
+           text-align: center;
+         border:1px solid blue}
+        /* *(별표) : 모든 태그를 가리킨다. */
+         *#wrap{color: blue}
+        /* *(별표)는 특별한 경우가 아니면 생략한다. */
+         #wrap{color:#222;}
+         /* 재정의 */
+
+        /* classsms . (마침표)로 표기한다. */
+        /* class명이 dokdo인 이름표를 가진 img */
+         img.dokdo{
+             border-radius: 50px;
+             width :80%;
+            }
+        
+         /* class 명이 dokdo 인 이름표를 가진 모든 태그 */
+        .dokdo{
+            border: 5px solid pink;
+        }
+        div.container>h2{
+            color: purple;
+        }         
+    </style>
+
+    
+</head>
+<body>
+    <!-- 한 페이지에서 같은 id를 중복해서 사용하지 않는다. -->
+    <div id="wrap">
+        
+            <h1>독도의 오늘</h1>
+            <p>독도는 화산활동으로 생겨난 두개의 큰 섬(동도, 서도)입니다.</p>
+
+            <!-- class는 id와 달리 한페이지에서 중복 사용할 수 있다. -->
+            <div class="container">
+              <h2>1. 동도에서 바라본 서도</h2>
+              <p><img class="dokdo"src="./images/seodo.png" alt="서도"></p>
+        
+              <h2>2. 서도에서 바라본 동도</h2>
+              <p><img class="dokdo"src="./images/dongdo.png" alt="동도"></p>
+            </div>
+        
+            <p>맞은편에서 바라본 독도의 모습입니다.</p>
+
+    </div>
+
+
+    
+</body>
+</html>

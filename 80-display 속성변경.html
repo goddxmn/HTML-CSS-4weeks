@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>80-display 속성변경.html</title>
+    <style>
+        /* 인라인으로 재정의는 되지만, 태생이 바뀌지 않음 
+        ex) 남자가 여장한다고 해서 여자가 되진 않음  */
+
+        h1,h2{
+            display: block;
+            display: inline;
+            background-color:pink;
+        }
+        /* > : 직계자식 선택자 */
+        p>span{
+            display: block;
+            width: 500px;
+            height: 50px;
+
+            line-height: 50px;
+
+            background-color:lightblue;
+        }
+        p>img{width: 800px; 
+        height: auto;}
+        /* auto - 종횡비를 유지하며 가로폭에 따라 값이 달라짐 */
+       
+    </style>
+</head>
+<body>
+    <h1>독도가 <span>대한민국</span>땅이라는</h1>
+    <h2>명백한 증거들</h2>
+
+    <div>
+        <p>1. 세종실록지리지(1454년) 표기</p>
+        <p>2. 일본 태정관의 인정(1877년)</p>
+        <p>3. 서양의 조선왕국전도에 표기(1874년)</p>
+        <p>4. 1950년 연합국의 공식발표</p>
+    </div>
+
+    <hr />
+
+    <p>
+        동서양을 막론한
+        <span>독도가 대한민국 영토라는 주장을 뒷받침하는 수많은 증거</span>
+        자료들~!
+    </p>
+
+    <p><img src="./images/evidence.jpg" alt="증거"></p>
+
+
+</body>
+</html>

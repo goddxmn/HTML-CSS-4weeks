@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>130-이미지 밑에 약간 뜨는 현상과 overflow</title>
+    <style>
+        p{
+            width: 600px;
+            height: 200px;
+            /* 이미지 밑에 약간 뜨는 현상 해결법-1 */
+            /* font-size: 0; */
+            border: 10px solid black;
+        }
+
+        p>img{
+            /* 이미지 밑에 약간 뜨는 형산 해결법-2 */
+            display: block;
+            width: 800px;
+        }
+
+        .dokdo-1{overflow:hidden;}  /* 가장 중요함, 가장 많이 씀. */
+        .dokdo-2{overflow: scroll;}
+        .dokdo-3{overflow: auto;}  /* 넘치게 되면 자동으로 scrollbar가 나타남 */
+        .dokdo-4{overflow: visible;} /* 기본값 : 오버되는 부분이 그냥 계속 보임 */
+      
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <h1>독도와 태풍</h1>
+        <p class="dokdo-1"><img src="./images/dongdo.png" alt="맑은 동도"></p>
+        <p class="dokdo-2"><img src="./images/dongdo-storm.png" alt="태풍 동도"></p>
+        <p class="dokdo-3"><img src="./images/seodo.png" alt="맑은 서도"></p>
+        <p class="dokdo-4"><img src="./images/seodo-strom.png" alt="태풍 서도"></p>
+    </div>
+</body>
+</html>
