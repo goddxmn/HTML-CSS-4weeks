@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>200-내용과 테두리사이의 공간 padding과 박스모델의 크기 계산</title>
+    <style>
+        .korea{
+            width: 800px;
+            height: 436px;
+            background-image: url(./images/korea.gif);
+            border: 1px solid #000;
+        }
+        img.dokdo{
+            width: 40px;
+            height: 57px;
+            margin: 110px 0 0 460px;
+            padding: 22px;
+            border: 5px dashed gold;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <h1>독도의 영해</h1>
+        <p>독도의 영해는 섬에서 12해리 (약 22km)까지의 수역이다.</p>
+        <p class="korea">
+            <img class="dokdo" src="./images/dokdo-sea.png" alt="#">
+        </p>
+    </div>
+</body>
+</html>

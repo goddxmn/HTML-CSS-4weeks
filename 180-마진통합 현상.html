@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>180-마진통합 현상</title>
+    <style>
+        *{margin: 0;}
+        h1{
+            text-align: center;
+            line-height: 100px;
+            height: 100px;
+        }
+        h1~p{
+            width: 150px;
+            height: 150px;
+            color: white;
+            line-height: 150px;
+            text-align: center;
+            border: 1px solid black;
+            margin: 0 auto;
+        }
+        .box2{
+            margin-bottom: 60px;
+        }
+        /* 마진통합현상 - 두 요소의 상하 margin에서만 발생하는 현상으로 작은 값을 무시되고
+        큰값으로 설정되는 현상을 의미한다. */
+
+        /* 좌우 margin의 경우는 해당하지 않는다. */
+        .box3{
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <h1>마진 통합 현상</h1>
+        <!-- 인라인 방식의 스타일 적용 -->
+        <p style="background-image: url(./images/dokdo-thumb01.png);" class="box1">독도-1</p>
+        <p style="background-image: url(./images/dokdo-thumb02.png);" class="box2">독도-2</p>
+        <p style="background-image: url(./images/dokdo-thumb03.png);" class="box3">독도-3</p>
+    </div>
+</body>
+</html>
