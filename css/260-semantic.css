@@ -1,0 +1,134 @@
+@charset "utf-8";
+
+/* CSS Reset */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');   
+*{margin: 0;padding: 0;}
+ul,ol,li{list-style:none;}
+a:link,a:visited,a:hover,a:active{
+    color: #222;
+    text-decoration: none;
+}
+
+hr{display: none;}
+address{font-style: normal;}
+
+body{
+    font-weight: 300;
+    font-size: 13px;
+    font-family: 'Noto Sans KR',돋움;
+    background-color: #fdfcf0;
+}
+
+#wrap{
+    width: 1000px;
+    margin: 0 auto;
+    padding: 50px 0;
+    /* border: 1px solid #000; */
+}
+
+header>h1{
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+/* h1 바로 다음에 나오는 p */
+header>h1+p{
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+section{
+    margin: 20px 0;
+}
+
+section>h2{
+    /* 화면에서 사라지게 하는 방법 */
+    /* display: none; 방법1 */
+    text-indent: -9999px;
+}
+
+section>.will{
+    padding: 40px 0;
+    border-top: 1px solid #e1ddd3;
+    border-bottom: 1px solid #e1ddd3;
+}
+
+section>.will>h3{
+    /* margin-left: 30px; */
+    /* text-indent: 30px; */
+    padding-left: 30px;
+    color: #764d25;
+    font-size: 13px;
+}
+
+section>.will>ul{
+    margin-top: 20px;
+    margin-left: 30px;
+    margin: 20px 0 0 30px;
+}
+
+/* 한칸공백 : 자손선택자(정말 향후에도 문제가 없을거라는 확신이 있을때만 사용 권장 */
+section>.will li{line-height: 1.6;}
+
+section>.will li>span{
+    display: block;
+    text-indent: 8px;
+}
+
+section>.info{margin-top: 20px;}
+
+section>.info>h3{
+    margin-left: 30px;
+    font-size: 13px;
+}
+
+section>.info>div{
+    margin: 20px 15px;
+    padding: 20px 0 10px 20px;
+    border: 1px solid #e1ddd3;
+}
+
+section>.info>div li{line-height: 1.8;}
+
+section>.info>div li:hover{
+    text-decoration: underline;
+}
+
+section>.info>div>p{
+    font-weight: 500;
+    line-height: 40px;
+}
+
+section>.info>.contact{
+    padding: 20px;
+}
+
+section>.info>.contact>p{
+    font-weight: 300;
+    line-height: 20px;
+}
+
+/* 푸터영역 */
+footer>p{
+    overflow: hidden;
+    width: 160px;
+    margin: 0 auto;
+    border: 2px solid #727272;
+    border-radius: 5px;
+}
+
+footer>p>a{
+    display: block;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+}
+
+footer>p>a:hover{
+    background-color: #eee;
+}
+
+footer>address{
+    margin-top: 20px;
+    text-align: center;
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+
+    <title>270-특정 요소를 선택하는 가상선택자</title>
+    <style>
+        ol,ul,li{list-style: none;}
+
+        ol>li:first-child{color: red;}
+        ol>li:nth-child(1){font-size: 50px;}
+
+        ol>li:last-child{color: blue;}
+        ol>li:nth-of-type(10) {font-size: 30px;}
+
+        ol>li:nth-child(7){color: green;}
+        ol>li:nth-of-type(7) {font-size: 40px;}
+
+        ol>li:nth-child(even){background-color: yellow;}
+        ol>li:nth-of-type(2n){font-style: italic;}
+
+        ol>li:nth-child(odd) {text-decoration: underline;}
+        ol>li:nth-of-type(2n+1) {font-weight: 800;}
+
+    </style>
+</head>
+<body>
+  <h1>특정 요소를 선택하는 가상선택자</h1>
+
+  <h2>:first child</h2>
+  <h2>:last child</h2>
+  <h2>:nth-child()</h2>
+  <h2>:nth-of-type()</h2>
+
+  <ol>
+    <li>1번째 자식</li>
+    <li>2번째 자식</li>
+    <li>3번째 자식</li>
+    <li>4번째 자식</li>
+    <li>5번째 자식</li>
+    <li>6번째 자식</li>
+    <li>7번째 자식</li>
+    <li>8번째 자식</li>
+    <li>9번째 자식</li>
+    <li>10번째 자식</li>
+  </ol>
+  
+<hr />
+
+<style>
+    div>p:nth-child(5) {color: red;}
+    div>p:nth-of-type(3) {font-size: 32px;}
+
+    div>address:nth-child(8) {background-color: yellow;}
+    div>address:nth-of-type(4) {font-size: 48px;}
+</style>
+
+<div>
+    <p>1</p>
+    <address>A</address>
+    <p>2</p>
+    <address>B</address>
+    <p>3</p>
+    <address>C</address>
+    <p>4</p>
+    <address>D</address>
+    <p>5</p>
+    <address>E</address>
+</div>
+</body>
+</html>
